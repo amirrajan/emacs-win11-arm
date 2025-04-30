@@ -4,6 +4,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ```
 2. restart powershell in admin mode
 ```
+# if choco install fails because of certs:
+# [System.Net.ServicePointManager]::SecurityProtocol.HasFlag([Net.SecurityProtocolType]::Tls12)
+# [System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}
 choco install msys2
 ```
 3. run this script to create a shortcut to mingw64 with admin rights
